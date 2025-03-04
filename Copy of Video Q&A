@@ -1,0 +1,45 @@
+{
+  "runSettings": {
+    "temperature": 1.0,
+    "model": "models/gemini-1.5-flash",
+    "candidateCount": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxOutputTokens": 8192,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }],
+    "responseMimeType": "text/plain",
+    "enableCodeExecution": true
+  },
+  "systemInstruction": {
+  },
+  "chunkedPrompt": {
+    "chunks": [{
+      "driveVideo": {
+        "id": "1hAI52OFM0hOQrY5issajOvrEGAXK_epk"
+      },
+      "role": "user"
+    }, {
+      "text": "Using this video, please answer the below questions:\n\n1. Who is the main subject of the video?\n2. List out how Ashley navigated her trip.\n3. At what timestamp did musicians appear playing instruments?",
+      "role": "user"
+    }, {
+      "text": "Here are the answers to your questions.\n\n1. The main subject of the video is Ashley. \n2.  Ashley used Google Trips to navigate her trip. She downloaded the app, which allowed her to have access to all of her trip details, including her flights, hotel information, and itinerary, even without internet access. She was able to personalize her itinerary and get directions to her destinations. \n3. Musicians appeared playing instruments at the 1:34 timestamp. \n",
+      "role": "model"
+    }],
+    "pendingInputs": [{
+      "text": "",
+      "role": "user"
+    }]
+  }
+}

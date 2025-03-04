@@ -1,0 +1,37 @@
+{
+  "runSettings": {
+    "temperature": 2.0,
+    "model": "models/gemini-1.5-flash",
+    "candidateCount": 1,
+    "topP": 0.95,
+    "topK": 40,
+    "maxOutputTokens": 8192,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }],
+    "responseMimeType": "text/plain",
+    "enableCodeExecution": true
+  },
+  "systemInstruction": {
+  },
+  "chunkedPrompt": {
+    "chunks": [{
+      "text": "Here\u0027s a blurb for an upcoming startup event. Rewrite this in a more professional tone intended for a corporate email. \n\n\"Calling all tech junkies, investors, and curious minds! 🤖🧠🎉\n\nReady to witness the future? We\u0027re throwing a pitch party where brilliant startups will showcase their mind-blowing AI creations. Think healthcare that reads your mind (almost!), businesses that run themselves (we wish!), and robots that make you coffee (we definitely need!).Whether you\u0027re an investor, a budding entrepreneur, or just someone who wants to geek out over AI, this event is your jam! Come watch the pitches, mingle with industry experts, and get inspired by these rockstar companies. Oh, and did we mention free food and drinks? Register now before the robots take all the spots! 😉\"",
+      "role": "user"
+    }],
+    "pendingInputs": [{
+      "text": "",
+      "role": "user"
+    }]
+  }
+}

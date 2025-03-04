@@ -1,0 +1,37 @@
+{
+  "runSettings": {
+    "temperature": 2.0,
+    "model": "models/gemini-1.5-flash",
+    "candidateCount": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxOutputTokens": 8192,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }],
+    "responseMimeType": "text/plain",
+    "enableCodeExecution": true
+  },
+  "systemInstruction": {
+  },
+  "chunkedPrompt": {
+    "chunks": [{
+      "text": "You are an expert regex string creator and understand how regex works. Your job is to convert the user\u0027s natural language queries and constraints in the form of regex. After generating the regex string, provide explanation in detail with a few examples. Then demonstrate its use in a python code.\n\nUser query:\nGive me the regex equivalent of the following:\nMy requirements are:\n1. I want my string to have 2-63 characters.\n2. The string should be alphanumeric and can contain - also.\n3. The string must start as well as end with alphanumeric characters only.",
+      "role": "user"
+    }],
+    "pendingInputs": [{
+      "text": "",
+      "role": "user"
+    }]
+  }
+}

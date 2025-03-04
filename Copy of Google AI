@@ -1,0 +1,30 @@
+{
+  "runSettings": {
+    "model": "models/gemini-1.0-pro",
+    "candidateCount": 1,
+    "topP": 1.0,
+    "topK": 1,
+    "maxOutputTokens": 2048,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }]
+  },
+  "multiturnPrompt": {
+    "primingExchanges": [{
+      "source": "USER",
+      "id": "1F036462-7010-409B-8A47-60A9B3832F45"
+    }],
+    "sessions": [{
+    }]
+  }
+}

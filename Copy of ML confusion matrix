@@ -1,0 +1,37 @@
+{
+  "runSettings": {
+    "temperature": 2.0,
+    "model": "models/gemini-1.5-flash",
+    "candidateCount": 1,
+    "topP": 0.95,
+    "topK": 40,
+    "maxOutputTokens": 8192,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }],
+    "responseMimeType": "text/plain",
+    "enableCodeExecution": true
+  },
+  "systemInstruction": {
+  },
+  "chunkedPrompt": {
+    "chunks": [{
+      "text": "I am a student learning ML. I have a trained a model to predict whether an image is a cat, dog, or squirrel. These are the predictions I\u0026#39;ve gotten from my model, and the ground truth from my labels. Here, 0 corresponds to cat, 1 to dog, and 2 to squirrel.\n\npredictions \u003d [0, 0, 1, 1, 0, 0, 2, 2, 1, 0]\nground_truth \u003d [0, 1, 1, 1, 1, 0, 2, 2, 2, 2]\n\nI would like to make a confusion matrix using sklearn. I would also like to output metrics like precision, recall, and accuracy. And I would like to visualize the confusion matrix by plotting it. The plot should show the class names instead of the numeric labels.\n\nCan you generate code to do this for me in Python?",
+      "role": "user"
+    }],
+    "pendingInputs": [{
+      "text": "",
+      "role": "user"
+    }]
+  }
+}

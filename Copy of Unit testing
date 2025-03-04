@@ -1,0 +1,37 @@
+{
+  "runSettings": {
+    "temperature": 1.0,
+    "model": "models/gemini-1.5-flash",
+    "candidateCount": 1,
+    "topP": 0.95,
+    "topK": 64,
+    "maxOutputTokens": 8192,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }],
+    "responseMimeType": "text/plain",
+    "enableCodeExecution": true
+  },
+  "systemInstruction": {
+  },
+  "chunkedPrompt": {
+    "chunks": [{
+      "text": "Here\u0027s a Python function that checks whether a word is a palindrome.\nAdd 10 different unit tests for this snippet with comments. Follow up with a short explanation of what was done.\n\n\n```\ndef is_palindrome(word):\n  \"\"\"\n  Checks whether a word is a palindrome.\n\n  Args:\n    word: The word to check.\n\n  Returns:\n    True if the word is a palindrome, False otherwise.\n  \"\"\"\n\n  # Convert the word to lowercase and remove non-alphanumeric characters.\n  word \u003d \u0027\u0027.join(char.lower() for char in word if char.isalnum())\n\n  # Check if the word is the same forwards and backwards.\n  return word \u003d\u003d word[::-1]\n```",
+      "role": "user"
+    }],
+    "pendingInputs": [{
+      "text": "",
+      "role": "user"
+    }]
+  }
+}

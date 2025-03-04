@@ -1,0 +1,44 @@
+{
+  "textPrompt": {
+    "value": "https://developers.google.com/static/search/apis/ipranges/googlebot.json"
+  },
+  "runSettings": {
+    "temperature": 0.9,
+    "model": "models/gemini-pro",
+    "candidateCount": 1,
+    "topP": 1.0,
+    "topK": 1,
+    "maxOutputTokens": 2048,
+    "safetySettings": [{
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_HATE_SPEECH",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }, {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }]
+  },
+  "testExamples": [{
+    "modelResponses": [{
+      "response": "The URL you provided is a JSON file that contains the IP ranges used by Googlebot, Google\u0027s web crawler. This information is useful for system administrators who need to configure their firewalls and other network devices to allow access to Googlebot.\n\nThe JSON file contains an array of objects, each of which represents a single IP range. Each object has the following properties:\n\n* **start**: The start of the IP range, in the format \"a.b.c.d\".\n* **end**: The end of the IP range, in the format \"a.b.c.d\".\n* **asn**: The Autonomous System Number (ASN) of the IP range.\n* **name**: A human-readable name for the IP range.\n\nFor example, the following object represents the IP range 66.249.64.0/19:\n\n```json\n{\n  \"start\": \"66.249.64.0\",\n  \"end\": \"66.249.95.255\",\n  \"asn\": 15169,\n  \"name\": \"Google - Mountain View, CA, USA\"\n}\n```\n\nSystem administrators can use the information in this JSON file to configure their firewalls and other network devices to allow access to Googlebot. This is important because Googlebot needs to be able to access websites in order to index them and include them in search results.\n\nGoogle periodically updates the IP ranges used by Googlebot. As a result, system administrators should regularly check the JSON file for updates and update their firewall and other network device configurations accordingly.",
+      "safetyRatings": [{
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "probability": "NEGLIGIBLE"
+      }, {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "probability": "NEGLIGIBLE"
+      }, {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "probability": "NEGLIGIBLE"
+      }, {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "probability": "NEGLIGIBLE"
+      }]
+    }]
+  }]
+}
